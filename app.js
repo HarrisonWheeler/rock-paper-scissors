@@ -1,17 +1,6 @@
 //computer choices in an array
 let gameChoice = [
-  {
-    name: "rock",
-    value: 1
-  },
-  {
-    name: "paper",
-    value: 2
-  },
-  {
-    name: "scissors",
-    value: 3
-  }
+  "Rock", "Paper", "Scissors"
 ]
 
 
@@ -22,13 +11,26 @@ let gameChoice = [
 // whatever button player uses, compare to computer choice from array.
 
 
-function playerChoice() {
-  // console.log("player choice");
-
-
-
-
-  // computerChoice()
+function play(playerChoice) {
+  // debugger
+  let cChoice = computerChoice()
+  console.log(cChoice)
+  if (playerChoice == cChoice) {
+    document.getElementById("result").innerHTML = "tie"
+  } else if (playerChoice == "Rock") {
+    if (cChoice == "Paper") {
+      document.getElementById("result").innerHTML = "loss"
+    } else {
+      document.getElementById("result").innerHTML = "win"
+    }
+  } else if (playerChoice == cChoice) {
+    document.getElementById("result").innerHTML = "tie"
+    if (cChoice == "Scissors") {
+      document.getElementById("result").innerHTML = "win"
+    } else {
+      document.getElementById("result").innerHTML = "tie"
+    }
+  }
 }
 
 
