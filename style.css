@@ -1,5 +1,7 @@
 body{
   background-color: #a3a0a0;
+  background-image: url("https://www.laserfiche.com/wp-content/uploads/2016/01/shutterstock_284660570-rs.jpg");
+  background-size: cover;
 }
 
 .full-height{

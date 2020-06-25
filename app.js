@@ -8,30 +8,30 @@ let gameChoice = [
 
 function play(playerChoice) {
   let cChoice = computerChoice()
-  console.log(cChoice)
+  // console.log(cChoice)
   if (playerChoice == cChoice) {
-    document.getElementById("result").innerHTML = "tie"
+    document.getElementById("result").innerHTML = "Tie!"
   } else if (playerChoice == "Rock") {
     if (cChoice == "Paper") {
-      document.getElementById("result").innerHTML = "loss"
+      document.getElementById("result").innerHTML = "You Lose!"
     } else {
-      document.getElementById("result").innerHTML = "win"
+      document.getElementById("result").innerHTML = "You Win!"
     }
   } if (playerChoice == cChoice) {
-    document.getElementById("result").innerHTML = "tie"
+    document.getElementById("result").innerHTML = "Tie!"
   } else if (playerChoice == "Paper") {
     if (cChoice == "Scissors") {
-      document.getElementById("result").innerHTML = "loss"
+      document.getElementById("result").innerHTML = "You Lose!"
     } else {
-      document.getElementById("result").innerHTML = "win"
+      document.getElementById("result").innerHTML = "You Win!"
     }
   } if (playerChoice == cChoice) {
-    document.getElementById("result").innerHTML = "tie"
+    document.getElementById("result").innerHTML = "Tie!"
   } else if (playerChoice == "Scissors") {
     if (cChoice == "Rock") {
-      document.getElementById("result").innerHTML = "loss"
+      document.getElementById("result").innerHTML = "You Lose!"
     } else {
-      document.getElementById("result").innerHTML = "win"
+      document.getElementById("result").innerHTML = "You Win!"
     }
   }
 }
@@ -44,11 +44,14 @@ function computerChoice() {
   return choice
 }
 
-// function for drawing what choice computer used to A.I. Choice on page
+// function for drawing what choice computer used to A.I. draw to screen.
+
+// function takes in random computer generated choice on button click and displays at same time that player win/loss info is displayed.
 
 function drawComputerChoice() {
-  computerChoice()
-
+  play()
+  let compChoice = computerChoice()
+  console.log(compChoice)
 }
 
 
